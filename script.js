@@ -679,7 +679,7 @@ function exportarPDF() {
     }   
     
       try {
-      doc.addImage(ASSINATURA_CLEVERSON, "PNG", col3X1, imgY, col3X2 - col3X1, sigImgH);
+      doc.addImage(ASSINATURA_CLEVERSON, "PNG", col2X1, imgY, col2X2 - col2X1, sigImgH);
     } catch (e) {
       console.error("Erro ao inserir assinatura Cleverson:", e);
     }
@@ -691,8 +691,8 @@ function exportarPDF() {
     doc.line(col1X1, sigY, col1X2, sigY);
     doc.text("Responsável ", (col1X1 + col1X2) / 2, sigY + 15, { align: "center" });   
 
-    doc.line(col3X1, sigY, col3X2, sigY);
-    doc.text("Supervisor", (col3X1 + col3X2) / 2, sigY + 15, { align: "center" });
+    doc.line(col2X1, sigY, col2X2, sigY);
+    doc.text("Supervisor", (col2X1 + col2X2) / 2, sigY + 15, { align: "center" });
 
     // Rodapé
     doc.setFontSize(8);
@@ -715,7 +715,6 @@ function exportarPDF() {
 
 function imprimirRelatorio() {
   const dados = gerarRelatorio();
-
   const logoURL = new URL("shiva.png", window.location.href).href;
   const assinaturaMateusURL = new URL("Assintura-Mateus.png", window.location.href).href;
   const assinaturaCleversonURL = new URL("Assintura-Cleverson.png", window.location.href).href;
