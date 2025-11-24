@@ -697,13 +697,13 @@ function exportarPDF() {
     doc.setTextColor(0);
 
     doc.line(col1X1, sigY, col1X2, sigY);
-    doc.text("Responsável Técnico", (col1X1 + col1X2) / 2, sigY + 15, { align: "center" });
+    doc.text("Responsável ", (col1X1 + col1X2) / 2, sigY + 15, { align: "center" });
 
     doc.line(col2X1, sigY, col2X2, sigY);
-    doc.text("Supervisor", (col2X1 + col2X2) / 2, sigY + 15, { align: "center" });
+    doc.text("Responsável", (col2X1 + col2X2) / 2, sigY + 15, { align: "center" });
 
     doc.line(col3X1, sigY, col3X2, sigY);
-    doc.text("Cleverson", (col3X1 + col3X2) / 2, sigY + 15, { align: "center" });
+    doc.text("Supervisor", (col3X1 + col3X2) / 2, sigY + 15, { align: "center" });
 
     // Rodapé
     doc.setFontSize(8);
@@ -867,16 +867,16 @@ function imprimirRelatorio() {
 
     <div class="assinaturas">
       <div class="assinatura-bloco">
-        <img src="${assinaturaMateusURL}" alt="Assinatura Responsável Técnico">
-        <div class="linha">Responsável Técnico</div>
+        <img src="${assinaturaMateusURL}" alt="Assinatura Responsável ">
+        <div class="linha">Responsável </div>
       </div>
       <div class="assinatura-bloco">
-        <img src="${assinaturaJeffersonURL}" alt="Assinatura Supervisor">
+        <img src="${assinaturaJeffersonURL}" alt="Assinatura Responsável">
+        <div class="linha">Responsável</div>
+      </div>
+      <div class="assinatura-bloco">
+        <img src="${assinaturaCleversonURL}" alt="Assinatura Supervisor">
         <div class="linha">Supervisor</div>
-      </div>
-      <div class="assinatura-bloco">
-        <img src="${assinaturaCleversonURL}" alt="Assinatura Cleverson">
-        <div class="linha">Cleverson</div>
       </div>
     </div>
 
@@ -991,8 +991,9 @@ function adicionarEnsaio(e = {}) {
           <option value="-0.3_bar_15min">-0,3 Bar × 15 min</option>
           <option value="gabarito">Gabarito</option>
           <option value="visual">Visual</option>
-          <option value="deflexao_15">Deflexão de (X) 15%</option>
+          <option value="deflexao_20">Deflexão de (X) 20%</option>
           <option value="deflexao_30">Deflexão de (X) 30%</option>
+          <option value="150c_30min">150º ± 2º × 15 min</option>
           <option value="150c_30min">150º ± 2º × 30 min</option>
           <option value="Alturadequeda_500">Altura de Queda 500 mm</option>
           <option value="Alturadequeda_1000">Altura de Queda 1000 mm</option>
